@@ -58,19 +58,46 @@ class SignInActivity : AppCompatActivity() {
 
                             if(it.isSuccessful){
 
-                                ProgressBarDialog.dismissProgressDialog()
+                                val userUid = firebaseAuth.currentUser!!.uid
 
-                                MotionToast.Companion.createColorToast(this@SignInActivity,
-                                    "Success",
-                                    "Logged in successfully!",
-                                    MotionToastStyle.SUCCESS,
-                                    MotionToast.GRAVITY_BOTTOM,
-                                    MotionToast.LONG_DURATION,
-                                    ResourcesCompat.getFont(this@SignInActivity, R.font.poppins_regular))
+                                database.collection("Users")
+                                    .document(userUid)
+                                    .get()
+                                    .addOnSuccessListener { document ->
 
-                                val mainIntent = Intent(this@SignInActivity, MainActivity::class.java)
-                                startActivity(mainIntent)
-                                finish()
+                                        val userAge = document.data?.get("UserAge")
+
+                                        if(userAge == ""){
+                                            ProgressBarDialog.dismissProgressDialog()
+
+                                            MotionToast.Companion.createColorToast(this@SignInActivity,
+                                                "Success",
+                                                "Logged in successfully!",
+                                                MotionToastStyle.SUCCESS,
+                                                MotionToast.GRAVITY_BOTTOM,
+                                                MotionToast.LONG_DURATION,
+                                                ResourcesCompat.getFont(this@SignInActivity, R.font.poppins_regular))
+
+                                            val mainIntent = Intent(this@SignInActivity, MainActivity::class.java)
+                                            startActivity(mainIntent)
+                                            finish()
+                                        }
+                                        else{
+                                            ProgressBarDialog.dismissProgressDialog()
+
+                                            MotionToast.Companion.createColorToast(this@SignInActivity,
+                                                "Success",
+                                                "Logged in successfully!",
+                                                MotionToastStyle.SUCCESS,
+                                                MotionToast.GRAVITY_BOTTOM,
+                                                MotionToast.LONG_DURATION,
+                                                ResourcesCompat.getFont(this@SignInActivity, R.font.poppins_regular))
+
+                                            val homeIntent = Intent(this@SignInActivity, HomeActivity::class.java)
+                                            startActivity(homeIntent)
+                                            finish()
+                                        }
+                                    }
                             }
                         }
                         .addOnFailureListener {

@@ -2,6 +2,7 @@ package com.blackpearl.healthmonitor.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.text.TextUtils
 import androidx.core.content.res.ResourcesCompat
 import com.blackpearl.healthmonitor.R
 import com.blackpearl.healthmonitor.databinding.ActivityForgotPasswordBinding
@@ -38,34 +39,49 @@ class ForgotPasswordActivity : AppCompatActivity() {
 
                 ProgressBarDialog.showProgressDialog(this@ForgotPasswordActivity)
 
-                firebaseAuth.sendPasswordResetEmail(email)
-                    .addOnCompleteListener {
-                        if(it.isSuccessful){
+                if(TextUtils.isEmpty(email)){
 
+                    ProgressBarDialog.dismissProgressDialog()
+
+                    MotionToast.Companion.createColorToast(this@ForgotPasswordActivity,
+                        "Info",
+                        "Fill required details!",
+                        MotionToastStyle.INFO,
+                        MotionToast.GRAVITY_BOTTOM,
+                        MotionToast.LONG_DURATION,
+                        ResourcesCompat.getFont(this@ForgotPasswordActivity, R.font.poppins_regular))
+                }
+                else{
+
+                    firebaseAuth.sendPasswordResetEmail(email)
+                        .addOnCompleteListener {
+                            if(it.isSuccessful){
+
+                                ProgressBarDialog.dismissProgressDialog()
+
+                                MotionToast.Companion.createColorToast(this@ForgotPasswordActivity,
+                                    "Success",
+                                    "Password reset link has been sent to $email!",
+                                    MotionToastStyle.SUCCESS,
+                                    MotionToast.GRAVITY_BOTTOM,
+                                    MotionToast.LONG_DURATION,
+                                    ResourcesCompat.getFont(this@ForgotPasswordActivity, R.font.poppins_regular))
+
+                            }
+                        }
+                        .addOnFailureListener {
                             ProgressBarDialog.dismissProgressDialog()
 
                             MotionToast.Companion.createColorToast(this@ForgotPasswordActivity,
-                                "Success",
-                                "Password reset link has been sent to $email!",
-                                MotionToastStyle.SUCCESS,
+                                "Error",
+                                "Invalid email address!",
+                                MotionToastStyle.ERROR,
                                 MotionToast.GRAVITY_BOTTOM,
                                 MotionToast.LONG_DURATION,
                                 ResourcesCompat.getFont(this@ForgotPasswordActivity, R.font.poppins_regular))
 
                         }
-                    }
-                    .addOnFailureListener {
-                        ProgressBarDialog.dismissProgressDialog()
-
-                        MotionToast.Companion.createColorToast(this@ForgotPasswordActivity,
-                            "Error",
-                            "Invalid email address!",
-                            MotionToastStyle.ERROR,
-                            MotionToast.GRAVITY_BOTTOM,
-                            MotionToast.LONG_DURATION,
-                            ResourcesCompat.getFont(this@ForgotPasswordActivity, R.font.poppins_regular))
-
-                    }
+                }
             }
         }
     }

@@ -8,11 +8,14 @@ import android.os.Handler
 import android.os.Looper
 import com.blackpearl.healthmonitor.databinding.ActivitySplashBinding
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.firestore.FirebaseFirestore
 
 @SuppressLint("CustomSplashScreen")
 class SplashActivity : AppCompatActivity() {
 
     private var binding : ActivitySplashBinding? = null
+
+    private lateinit var database : FirebaseFirestore
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -21,6 +24,7 @@ class SplashActivity : AppCompatActivity() {
         setContentView(binding!!.root)
 
         val firebaseAuth = FirebaseAuth.getInstance()
+        database = FirebaseFirestore.getInstance()
 
         binding?.apply {
 
@@ -29,9 +33,26 @@ class SplashActivity : AppCompatActivity() {
                 val currentUser = firebaseAuth.currentUser
 
                 if(currentUser != null){
-                    val mainIntent = Intent(this@SplashActivity, MainActivity::class.java)
-                    startActivity(mainIntent)
-                    finish()
+
+                    val userUid = currentUser.uid
+
+                    database.collection("Users")
+                        .document(userUid)
+                        .get()
+                        .addOnSuccessListener { document ->
+                            val userAge = document.data?.get("UserAge")
+
+                            if(userAge == ""){
+                                val mainIntent = Intent(this@SplashActivity, MainActivity::class.java)
+                                startActivity(mainIntent)
+                                finish()
+                            }
+                            else{
+                                val homeIntent = Intent(this@SplashActivity, HomeActivity::class.java)
+                                startActivity(homeIntent)
+                                finish()
+                            }
+                        }
                 }
                 else{
                     val signInIntent = Intent(this@SplashActivity, SignInActivity::class.java)
