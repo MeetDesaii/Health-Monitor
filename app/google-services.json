@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "585608144570",
+    "project_id": "health-monitor-proj",
+    "storage_bucket": "health-monitor-proj.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:585608144570:android:80081d1f25d65c274fc483",
+        "android_client_info": {
+          "package_name": "com.blackpearl.healthmonitor"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "585608144570-i4qfrhiigf6jme01u8c9kc5hscek59e9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBB9lFMDFjqTo9zpCWh4JbSRwjMrRpBfFY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "585608144570-i4qfrhiigf6jme01u8c9kc5hscek59e9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

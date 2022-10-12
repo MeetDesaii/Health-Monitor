@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.SignInActivity">
+
+    <TextView
+        android:id="@+id/txtHealthMonitor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/poppins_semi_bold"
+        android:text="Health Monitor"
+        android:textColor="@color/black"
+        android:textSize="22sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtSignIn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_medium"
+        android:text="Sign In"
+        android:textColor="@color/blue"
+        android:textSize="17sp"
+        app:layout_constraintStart_toStartOf="@+id/txtHealthMonitor"
+        app:layout_constraintEnd_toEndOf="@id/txtHealthMonitor"
+        app:layout_constraintTop_toBottomOf="@+id/txtHealthMonitor" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottie_view"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:layout_marginTop="20dp"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_fileName="signin_signup.json"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtSignIn" />
+
+    <EditText
+        android:id="@+id/edtTxtEmail"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/edittext_background"
+        android:fontFamily="@font/poppins_regular"
+        android:hint="Email address"
+        android:inputType="textEmailAddress"
+        android:padding="15dp"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/lottie_view"
+        tools:ignore="Autofill" />
+
+    <EditText
+        android:id="@+id/edtTxtPassword"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/edittext_background"
+        android:fontFamily="@font/poppins_regular"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:padding="15dp"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/edtTxtEmail"
+        app:layout_constraintTop_toBottomOf="@+id/edtTxtEmail"
+        tools:ignore="Autofill" />
+
+    <TextView
+        android:id="@+id/txtForgotPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="13dp"
+        android:fontFamily="@font/poppins_medium"
+        android:padding="7dp"
+        android:textColor="@color/blue"
+        android:text="Forgot password?"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edtTxtPassword" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnSignIn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/button_background"
+        android:fontFamily="@font/poppins_medium"
+        android:textAllCaps="false"
+        android:text="Sign In"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/edtTxtPassword" />
+
+    <TextView
+        android:id="@+id/txtDontHaveAnAccountYet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:fontFamily="@font/poppins_medium"
+        android:text="Don't have an account yet?"
+        android:textSize="15sp"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toStartOf="@id/txtSignUp"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <TextView
+        android:id="@+id/txtSignUp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:fontFamily="@font/poppins_medium"
+        android:gravity="center"
+        android:text="Sign Up"
+        android:textColor="@color/blue"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="@id/txtDontHaveAnAccountYet"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/txtDontHaveAnAccountYet"
+        app:layout_constraintTop_toTopOf="@id/txtDontHaveAnAccountYet" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
