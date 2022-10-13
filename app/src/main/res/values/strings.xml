@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">Health Monitor</string>
     <string name="table_info">» This is the World Health Organization\'s (WHO) recommended body weight based on BMI values for adults. It is used for both men and women, age 20 or older.</string>
-    <string name="bmi_info"><![CDATA[• Severe Thinness (< 16 kg/m^2)\n• Moderate Thinness (16 - 17 kg/m^2)\n• Mild Thinness (17 - 18.5 kg/m^2)\n• Normal (18.5 - 25 kg/m^2)\n• Overweight (25 - 30 kg/m^2)\n• Obese Class I (30 - 35 kg/m^2)\n• Obese Class II (35 - 40 kg/m^2)\n• Obese Class III (>40 kg/m^2)]]></string>
+    <string name="bmi_info"><![CDATA[• Severe Thinness (<16 kg/m^2)\n• Moderate Thinness (16 - 17 kg/m^2)\n• Mild Thinness (17 - 18.5 kg/m^2)\n• Normal (18.5 - 25 kg/m^2)\n• Overweight (25 - 30 kg/m^2)\n• Obese Class I (30 - 35 kg/m^2)\n• Obese Class II (35 - 40 kg/m^2)\n• Obese Class III (>40 kg/m^2)]]></string>
+    <string name="info_1">» Every day you lose water through your breath, perspiration, urine and bowel movements. For your body to function properly, you must replenish its water supply by consuming beverages and foods that contain water.\n\n» So how much fluid does the average, healthy adult living in a temperate climate need? The U.S. National Academies of Sciences, Engineering, and Medicine determined that an adequate daily fluid intake is:</string>
+    <string name="info_2">• About 15.5 cups (3.7 liters) of fluids a day for men\n• About 11.5 cups (2.7 liters) of fluids a day for women\n\n» These recommendations cover fluids from water, other beverages and food. About 20% of daily fluid intake usually comes from food and the rest from drinks.</string>
 </resources>

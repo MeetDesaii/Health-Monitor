@@ -59,7 +59,7 @@ class SplashActivity : AppCompatActivity() {
                     startActivity(signInIntent)
                     finish()
                 }
-            }, 2500)
+            }, 2000)
         }
     }
 }

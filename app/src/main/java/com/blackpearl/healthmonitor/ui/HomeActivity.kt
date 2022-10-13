@@ -47,7 +47,7 @@ class HomeActivity : AppCompatActivity() {
                     ProgressBarDialog.dismissProgressDialog()
                     val username = document.data?.get("Username")
 
-                    txtLetsExplore.text = "Hello $username, Let's Explore!"
+                    txtLetsExplore.text = "Hello $username, Let's Explore The Smart Health Monitoring System!"
                 }
                 .addOnFailureListener {
                     ProgressBarDialog.dismissProgressDialog()
@@ -56,6 +56,11 @@ class HomeActivity : AppCompatActivity() {
             cardViewBMI.setOnClickListener {
                 val bmiIntent = Intent(this@HomeActivity, BmiActivity::class.java)
                 startActivity(bmiIntent)
+            }
+
+            cardWaterSuggestion.setOnClickListener {
+                val waterSugIntent = Intent(this@HomeActivity, WaterSuggestionActivity::class.java)
+                startActivity(waterSugIntent)
             }
         }
     }

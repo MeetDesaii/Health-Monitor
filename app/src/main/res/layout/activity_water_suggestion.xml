@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.BmiActivity">
+    tools:context=".ui.WaterSuggestionActivity">
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appbarLayout"
@@ -37,16 +37,16 @@
                     android:layout_marginStart="20dp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintBottom_toBottomOf="@id/bmiCalculator"
+                    app:layout_constraintBottom_toBottomOf="@id/headWaterSuggestion"
                     android:src="@drawable/ic_back_button"
                     tools:ignore="ContentDescription" />
 
                 <TextView
-                    android:id="@+id/bmiCalculator"
+                    android:id="@+id/headWaterSuggestion"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="18sp"
-                    android:text="BMI Calculator"
+                    android:text="Water Suggestion"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -245,147 +245,106 @@
                             app:layout_constraintBottom_toBottomOf="@id/txtWeight"/>
 
                         <TextView
-                            android:id="@+id/txtCalculatedBmi"
+                            android:id="@+id/txtSuggestionToUser"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/poppins_semi_bold"
                             android:gravity="center"
-                            android:layout_marginTop="40dp"
+                            android:padding="5dp"
+                            android:layout_marginTop="30dp"
                             android:textColor="@color/black"
-                            android:textSize="18sp"
+                            android:textSize="16sp"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintTop_toBottomOf="@id/txtWeight"/>
 
                         <TextView
-                            android:id="@+id/txtBMI"
+                            android:id="@+id/suggestion"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/poppins_semi_bold"
                             android:gravity="center"
-                            android:layout_marginStart="5dp"
-                            android:layout_marginTop="20dp"
-                            android:text="BMI:"
-                            android:textColor="@color/black"
-                            android:textSize="16sp"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@id/txtCalculatedBmi"/>
-
-                        <TextView
-                            android:id="@+id/bmi"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="@font/poppins_semi_bold"
-                            android:gravity="center"
-                            android:layout_marginStart="7dp"
                             android:textColor="@color/blue"
-                            android:textSize="16sp"
-                            app:layout_constraintStart_toEndOf="@id/txtBMI"
-                            app:layout_constraintTop_toTopOf="@id/txtBMI"
-                            app:layout_constraintBottom_toBottomOf="@id/txtBMI"/>
-
-                        <TextView
-                            android:id="@+id/txtCategory"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="@font/poppins_semi_bold"
-                            android:gravity="center"
-                            android:layout_marginStart="5dp"
-                            android:layout_marginTop="5dp"
                             android:layout_marginBottom="5dp"
-                            android:text="Category (based on BMI):"
-                            android:textColor="@color/black"
-                            android:textSize="12sp"
+                            android:textSize="16sp"
+                            app:layout_constraintTop_toBottomOf="@id/txtSuggestionToUser"
                             app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@id/txtBMI"
+                            app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintBottom_toBottomOf="parent"/>
-
-                        <TextView
-                            android:id="@+id/category"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="@font/poppins_semi_bold"
-                            android:gravity="center"
-                            android:layout_marginStart="7dp"
-                            android:textColor="@color/blue"
-                            android:textSize="14sp"
-                            app:layout_constraintStart_toEndOf="@id/txtCategory"
-                            app:layout_constraintTop_toTopOf="@id/txtCategory"
-                            app:layout_constraintBottom_toBottomOf="@id/txtCategory"/>
 
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
                 </androidx.cardview.widget.CardView>
 
-            <androidx.cardview.widget.CardView
-                android:id="@+id/cardBmiCalculate"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="30dp"
-                android:layout_marginStart="15dp"
-                android:layout_marginEnd="15dp"
-                android:layout_marginBottom="20dp"
-                app:cardCornerRadius="10dp"
-                app:cardElevation="10dp"
-                app:cardBackgroundColor="#F3F4F8"
-                app:layout_constraintTop_toBottomOf="@id/cardUserInfo"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent">
-
-                <androidx.constraintlayout.widget.ConstraintLayout
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardWaterNeed"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:padding="10dp">
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginBottom="20dp"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="10dp"
+                    app:cardBackgroundColor="#F3F4F8"
+                    app:layout_constraintTop_toBottomOf="@id/cardUserInfo"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent">
 
-                    <TextView
-                        android:id="@+id/txtBmiInfo"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/poppins_medium"
-                        android:gravity="center"
-                        android:layout_marginTop="5dp"
-                        android:text="BMI Information"
-                        android:textColor="@color/black"
-                        android:textSize="16sp"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="10dp">
 
-                    <TextView
-                        android:id="@+id/txtTableInfo"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/poppins_regular"
-                        android:layout_marginTop="20dp"
-                        android:padding="5dp"
-                        android:lineSpacingExtra="5dp"
-                        android:text="@string/table_info"
-                        android:textColor="@color/black"
-                        android:textSize="13sp"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintTop_toBottomOf="@id/txtBmiInfo" />
+                        <TextView
+                            android:id="@+id/txtHowMuchWater"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_medium"
+                            android:gravity="center"
+                            android:layout_marginTop="5dp"
+                            android:text="How much water do you need?"
+                            android:textColor="@color/black"
+                            android:textSize="16sp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
 
-                    <TextView
-                        android:id="@+id/bmiTable"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/poppins_regular"
-                        android:layout_marginTop="5dp"
-                        android:layout_marginBottom="5dp"
-                        android:lineSpacingExtra="5dp"
-                        android:padding="5dp"
-                        android:text="@string/bmi_info"
-                        android:textColor="@color/blue"
-                        android:textSize="14sp"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@id/txtTableInfo"
-                        app:layout_constraintBottom_toBottomOf="parent"/>
+                        <TextView
+                            android:id="@+id/txtInfo1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_regular"
+                            android:layout_marginTop="20dp"
+                            android:lineSpacingExtra="5dp"
+                            android:padding="5dp"
+                            android:text="@string/info_1"
+                            android:textColor="@color/black"
+                            android:textSize="13sp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/txtHowMuchWater" />
 
-                </androidx.constraintlayout.widget.ConstraintLayout>
+                        <TextView
+                            android:id="@+id/bmiTable"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_regular"
+                            android:layout_marginTop="5dp"
+                            android:lineSpacingExtra="5dp"
+                            android:padding="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:text="@string/info_2"
+                            android:textColor="@color/blue"
+                            android:textSize="14sp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/txtInfo1"
+                            app:layout_constraintBottom_toBottomOf="parent"/>
 
-            </androidx.cardview.widget.CardView>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.cardview.widget.CardView>
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
