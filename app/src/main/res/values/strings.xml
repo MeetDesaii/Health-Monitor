@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Health Monitor</string>
+    <string name="table_info">» This is the World Health Organization\'s (WHO) recommended body weight based on BMI values for adults. It is used for both men and women, age 20 or older.</string>
+    <string name="bmi_info"><![CDATA[• Severe Thinness (< 16 kg/m^2)\n• Moderate Thinness (16 - 17 kg/m^2)\n• Mild Thinness (17 - 18.5 kg/m^2)\n• Normal (18.5 - 25 kg/m^2)\n• Overweight (25 - 30 kg/m^2)\n• Obese Class I (30 - 35 kg/m^2)\n• Obese Class II (35 - 40 kg/m^2)\n• Obese Class III (>40 kg/m^2)]]></string>
 </resources>

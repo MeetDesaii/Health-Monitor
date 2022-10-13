@@ -143,6 +143,50 @@
         app:layout_constraintTop_toBottomOf="@id/edtTxtHeight"
         tools:ignore="Autofill" />
 
+    <TextView
+        android:id="@+id/txtGender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:fontFamily="@font/poppins_medium"
+        android:text="Gender: "
+        android:textColor="@color/blue"
+        app:layout_constraintEnd_toStartOf="@id/radioGroup"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="@id/edtTxtWeight"
+        app:layout_constraintTop_toBottomOf="@id/edtTxtWeight" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="@id/txtGender"
+        app:layout_constraintEnd_toEndOf="@id/edtTxtWeight"
+        app:layout_constraintStart_toEndOf="@id/txtGender"
+        app:layout_constraintTop_toTopOf="@id/txtGender">
+
+        <RadioButton
+            android:id="@+id/radioBtnMale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_medium"
+            android:text="Male"
+            android:textSize="13sp"
+            android:buttonTint="@color/blue" />
+
+        <RadioButton
+            android:id="@+id/radioBtnFemale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_medium"
+            android:layout_marginStart="5dp"
+            android:text="Female"
+            android:textSize="13sp"
+            android:buttonTint="@color/blue"/>
+
+    </RadioGroup>
+
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnSaveDetails"
         android:layout_width="match_parent"
@@ -156,6 +200,6 @@
         android:text="Save details"
         android:textColor="@color/white"
         android:textSize="16sp"
-        app:layout_constraintTop_toBottomOf="@id/edtTxtWeight" />
+        app:layout_constraintTop_toBottomOf="@id/txtGender" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

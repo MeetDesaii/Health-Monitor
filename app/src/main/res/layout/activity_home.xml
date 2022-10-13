@@ -58,4 +58,190 @@
 
     </com.google.android.material.appbar.AppBarLayout>
 
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/appbarLayout"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <ScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="50dp">
+
+                <TextView
+                    android:id="@+id/txtLetsExplore"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_medium"
+                    android:gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:textColor="@color/blue"
+                    android:textSize="18sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardViewBMI"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="70dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="10dp"
+                    app:cardBackgroundColor="#F3F4F8"
+                    app:layout_constraintTop_toBottomOf="@id/txtLetsExplore"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="10dp">
+
+                        <ImageView
+                            android:id="@+id/bullet1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_right_bullet_vector"
+                            app:layout_constraintBottom_toBottomOf="@id/txtBmi"
+                            app:layout_constraintEnd_toStartOf="@id/txtBmi"
+                            app:layout_constraintHorizontal_chainStyle="packed"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="@id/txtBmi" />
+
+                        <TextView
+                            android:id="@+id/txtBmi"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:fontFamily="@font/poppins_medium"
+                            android:gravity="center"
+                            android:text="Calculate BMI (Body Mass Index)"
+                            android:textColor="@color/black"
+                            android:textSize="14sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@id/bullet1"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardSleepSuggestion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginBottom="20dp"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="10dp"
+                    app:cardBackgroundColor="#F3F4F8"
+                    app:layout_constraintTop_toBottomOf="@id/cardViewBMI"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="10dp">
+
+                        <ImageView
+                            android:id="@+id/bullet2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_right_bullet_vector"
+                            app:layout_constraintBottom_toBottomOf="@id/txtSleepSuggestion"
+                            app:layout_constraintEnd_toStartOf="@id/txtSleepSuggestion"
+                            app:layout_constraintHorizontal_chainStyle="packed"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="@id/txtSleepSuggestion" />
+
+                        <TextView
+                            android:id="@+id/txtSleepSuggestion"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:fontFamily="@font/poppins_medium"
+                            android:gravity="center"
+                            android:text="Sleep Suggestion"
+                            android:textColor="@color/black"
+                            android:textSize="14sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@id/bullet2"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardWaterSuggestion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginBottom="20dp"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="10dp"
+                    app:cardBackgroundColor="#F3F4F8"
+                    app:layout_constraintTop_toBottomOf="@id/cardSleepSuggestion"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="10dp">
+
+                        <ImageView
+                            android:id="@+id/bullet3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_right_bullet_vector"
+                            app:layout_constraintBottom_toBottomOf="@id/txtWaterSuggestion"
+                            app:layout_constraintEnd_toStartOf="@id/txtWaterSuggestion"
+                            app:layout_constraintHorizontal_chainStyle="packed"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="@id/txtWaterSuggestion" />
+
+                        <TextView
+                            android:id="@+id/txtWaterSuggestion"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:fontFamily="@font/poppins_medium"
+                            android:gravity="center"
+                            android:text="Water Suggestion"
+                            android:textColor="@color/black"
+                            android:textSize="14sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@id/bullet3"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.cardview.widget.CardView>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </ScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

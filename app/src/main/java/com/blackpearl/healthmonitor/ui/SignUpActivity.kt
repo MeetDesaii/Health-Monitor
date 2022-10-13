@@ -89,6 +89,7 @@ class SignUpActivity : AppCompatActivity() {
                                 userData["UserAge"] = ""
                                 userData["UserHeight"] = ""
                                 userData["UserWeight"] = ""
+                                userData["UserGender"] = ""
 
                                 database.collection("Users")
                                     .document(userUID)

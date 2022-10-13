@@ -10,7 +10,6 @@ import com.blackpearl.healthmonitor.databinding.ActivityMainBinding
 import com.blackpearl.healthmonitor.utils.ProgressBarDialog
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
-import org.w3c.dom.Text
 import www.sanju.motiontoast.MotionToast
 import www.sanju.motiontoast.MotionToastStyle
 
@@ -69,7 +68,7 @@ class MainActivity : AppCompatActivity() {
                 userHeight = edtTxtHeight.text.toString()
                 userWeight = edtTxtWeight.text.toString()
 
-                if(TextUtils.isEmpty(userAge) || TextUtils.isEmpty(userHeight) || TextUtils.isEmpty(userWeight)){
+                if(TextUtils.isEmpty(userAge) || TextUtils.isEmpty(userHeight) || TextUtils.isEmpty(userWeight) || (!radioBtnMale.isChecked && !radioBtnFemale.isChecked)){
                     MotionToast.Companion.createColorToast(this@MainActivity,
                         "Info",
                         "Fill required details!",
@@ -78,8 +77,8 @@ class MainActivity : AppCompatActivity() {
                         MotionToast.LONG_DURATION,
                         ResourcesCompat.getFont(this@MainActivity, R.font.poppins_regular))
                 }
-                else if((userAge.toInt() < 1) || (userAge.toInt() > 130)){
-                    edtTxtAge.error = "Range: 1-130 year"
+                else if((userAge.toInt() < 2) || (userAge.toInt() > 120)){
+                    edtTxtAge.error = "Range: 2-120 year"
                 }
                 else if((userHeight.toInt() <= 50) || (userHeight.toInt() >= 250)){
                     edtTxtHeight.error = "Range: 50-250 cm"
@@ -93,6 +92,12 @@ class MainActivity : AppCompatActivity() {
                     updateRef.update("UserAge", userAge)
                     updateRef.update("UserHeight", userHeight)
                     updateRef.update("UserWeight", userWeight)
+                    if(radioBtnMale.isChecked){
+                        updateRef.update("UserGender", "Male")
+                    }
+                    else{
+                        updateRef.update("UserGender", "Female")
+                    }
 
                     MotionToast.Companion.createColorToast(this@MainActivity,
                         "Success",
