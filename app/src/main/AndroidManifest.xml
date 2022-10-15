@@ -17,6 +17,9 @@
         android:theme="@style/Theme.HealthMonitor"
         tools:targetApi="31">
         <activity
+            android:name=".ui.SleepActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.WaterSuggestionActivity"
             android:exported="false" />
         <activity

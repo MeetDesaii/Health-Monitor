@@ -62,6 +62,11 @@ class HomeActivity : AppCompatActivity() {
                 val waterSugIntent = Intent(this@HomeActivity, WaterSuggestionActivity::class.java)
                 startActivity(waterSugIntent)
             }
+
+            cardSleepTracker.setOnClickListener {
+                val sleepTrackerIntent = Intent(this@HomeActivity, SleepActivity::class.java)
+                startActivity(sleepTrackerIntent)
+            }
         }
     }
 }
