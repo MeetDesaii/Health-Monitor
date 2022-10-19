@@ -77,20 +77,35 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:padding="10dp">
+            android:paddingTop="10dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:paddingBottom="30dp">
+
+            <TextView
+                android:id="@+id/txtRequirement"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/poppins_semi_bold"
+                android:text="Minimum sleep time required: "
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/sleepTime"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
                 android:fontFamily="@font/poppins_semi_bold"
                 android:text="8h 0m"
-                android:textColor="@color/black"
+                android:textColor="@color/blue"
                 android:textSize="24sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toBottomOf="@id/txtRequirement" />
 
             <TextView
                 android:id="@+id/txtSleepGoal"
@@ -98,7 +113,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/poppins_medium"
                 android:layout_marginTop="10dp"
-                android:text="Sleep Goal - "
+                android:text="Sleep - "
                 android:textColor="@color/black"
                 android:textSize="14sp"
                 app:layout_constraintEnd_toStartOf="@id/txtSleepStatus"
@@ -132,13 +147,105 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/txtSleepGoal" />
 
+            <TextView
+                android:id="@+id/txtReminderInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_medium"
+                android:gravity="center"
+                android:lineSpacingExtra="5dp"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:layout_marginTop="20dp"
+                android:text="Click on edit to set reminder of Sleep and Awake time... Let's set the reminder using Health Monitor!"
+                android:textSize="12sp"
+                android:textColor="@color/blue"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txtSleepInfo" />
+
+            <TextView
+                android:id="@+id/tvSleepTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="60dp"
+                android:paddingTop="10dp"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:paddingBottom="5dp"
+                android:text="11:05 PM"
+                android:fontFamily="@font/poppins_semi_bold"
+                android:textColor="@color/blue"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toStartOf="@+id/tvWakeTime"
+                app:layout_constraintHorizontal_chainStyle="spread_inside"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtReminderInfo"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+            <TextView
+                android:id="@+id/tvWakeTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="25dp"
+                android:paddingTop="10dp"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:paddingBottom="5dp"
+                android:text="07:00 AM"
+                android:textColor="@color/blue"
+                android:fontFamily="@font/poppins_semi_bold"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="@+id/tvSleepTime"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tvSleepTime"
+                app:layout_constraintTop_toTopOf="@+id/tvSleepTime" />
+
             <ImageView
-                android:id="@+id/icNight"
-                android:layout_width="26dp"
-                android:layout_height="26dp"
-                android:src="@drawable/ic_day"
-                app:layout_constraintTop_toBottomOf="@id/txtSleepInfo"
-                app:layout_constraintStart_toStartOf="parent"/>
+                android:id="@+id/imageView"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginBottom="12dp"
+                app:layout_constraintBottom_toTopOf="@+id/tvSleepTime"
+                app:layout_constraintEnd_toEndOf="@+id/tvSleepTime"
+                app:layout_constraintStart_toStartOf="@+id/tvSleepTime"
+                app:srcCompat="@drawable/ic_night" />
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginBottom="12dp"
+                app:layout_constraintBottom_toTopOf="@+id/tvWakeTime"
+                app:layout_constraintEnd_toEndOf="@+id/tvWakeTime"
+                app:layout_constraintStart_toStartOf="@+id/tvWakeTime"
+                app:srcCompat="@drawable/ic_day" />
+
+            <TextView
+                android:id="@+id/btnEditSleepTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_medium"
+                android:text="Edit"
+                android:textColor="@color/yellow"
+                android:textSize="16sp"
+                app:layout_constraintTop_toBottomOf="@id/tvSleepTime"
+                app:layout_constraintStart_toStartOf="@id/tvSleepTime"
+                app:layout_constraintEnd_toEndOf="@id/tvSleepTime"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+            <TextView
+                android:id="@+id/btnEditWakeTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_medium"
+                android:text="Edit"
+                android:textColor="@color/yellow"
+                android:textSize="16sp"
+                app:layout_constraintTop_toBottomOf="@id/tvWakeTime"
+                app:layout_constraintStart_toStartOf="@id/tvWakeTime"
+                app:layout_constraintEnd_toEndOf="@id/tvWakeTime"/>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

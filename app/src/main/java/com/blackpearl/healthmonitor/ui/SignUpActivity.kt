@@ -86,6 +86,8 @@ class SignUpActivity : AppCompatActivity() {
                                 userData["UserUID"] = userUID
                                 userData["UserEmail"] = email
                                 userData["Username"] = username
+                                userData["UserSleepTime"] = "11:30 pm"
+                                userData["UserAwakeTime"] = "07:30 am"
                                 userData["UserAge"] = ""
                                 userData["UserHeight"] = ""
                                 userData["UserWeight"] = ""
