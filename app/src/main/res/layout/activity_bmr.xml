@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.WaterSuggestionActivity">
+    tools:context=".ui.BmrActivity">
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appbarLayout"
@@ -37,16 +37,16 @@
                     android:layout_marginStart="20dp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintBottom_toBottomOf="@id/headWaterSuggestion"
+                    app:layout_constraintBottom_toBottomOf="@id/bmrCalculator"
                     android:src="@drawable/ic_back_button"
                     tools:ignore="ContentDescription" />
 
                 <TextView
-                    android:id="@+id/headWaterSuggestion"
+                    android:id="@+id/bmrCalculator"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="18sp"
-                    android:text="Water Suggestion"
+                    android:text="BMR Calculator"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -245,39 +245,53 @@
                             app:layout_constraintBottom_toBottomOf="@id/txtWeight"/>
 
                         <TextView
-                            android:id="@+id/txtSuggestionToUser"
+                            android:id="@+id/txtCalculatedBmr"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/poppins_semi_bold"
                             android:gravity="center"
-                            android:padding="5dp"
-                            android:layout_marginTop="30dp"
+                            android:layout_marginTop="40dp"
                             android:textColor="@color/black"
-                            android:textSize="16sp"
+                            android:textSize="18sp"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintTop_toBottomOf="@id/txtWeight"/>
 
                         <TextView
-                            android:id="@+id/suggestion"
+                            android:id="@+id/txtBMR"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/poppins_semi_bold"
                             android:gravity="center"
-                            android:textColor="@color/blue"
-                            android:layout_marginBottom="5dp"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginBottom="10dp"
+                            android:text="BMR:"
+                            android:textColor="@color/black"
                             android:textSize="16sp"
-                            app:layout_constraintTop_toBottomOf="@id/txtSuggestionToUser"
                             app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/txtCalculatedBmr"
                             app:layout_constraintBottom_toBottomOf="parent"/>
+
+                        <TextView
+                            android:id="@+id/bmr"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_semi_bold"
+                            android:gravity="center"
+                            android:layout_marginStart="7dp"
+                            android:textColor="@color/blue"
+                            android:textSize="16sp"
+                            app:layout_constraintStart_toEndOf="@id/txtBMR"
+                            app:layout_constraintTop_toTopOf="@id/txtBMR"
+                            app:layout_constraintBottom_toBottomOf="@id/txtBMR"/>
 
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/cardWaterNeed"
+                    android:id="@+id/cardBmiInformation"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="30dp"
@@ -298,13 +312,13 @@
                         android:padding="10dp">
 
                         <TextView
-                            android:id="@+id/txtHowMuchWater"
+                            android:id="@+id/txtBmrInfo"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/poppins_medium"
                             android:gravity="center"
                             android:layout_marginTop="5dp"
-                            android:text="How much water do you need?"
+                            android:text="BMR Information"
                             android:textColor="@color/black"
                             android:textSize="16sp"
                             app:layout_constraintStart_toStartOf="parent"
@@ -312,19 +326,19 @@
                             app:layout_constraintTop_toTopOf="parent" />
 
                         <TextView
-                            android:id="@+id/txtInfo1"
+                            android:id="@+id/txtTableInfo"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/poppins_regular"
                             android:layout_marginTop="20dp"
-                            android:lineSpacingExtra="5dp"
                             android:padding="5dp"
-                            android:text="@string/info_1"
+                            android:lineSpacingExtra="5dp"
+                            android:text="@string/bmr_info"
                             android:textColor="@color/black"
                             android:textSize="13sp"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintTop_toBottomOf="@id/txtHowMuchWater" />
+                            app:layout_constraintTop_toBottomOf="@id/txtBmrInfo" />
 
                         <TextView
                             android:id="@+id/bmiTable"
@@ -332,14 +346,14 @@
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/poppins_regular"
                             android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"
                             android:lineSpacingExtra="5dp"
                             android:padding="5dp"
-                            android:layout_marginBottom="5dp"
-                            android:text="@string/info_2"
+                            android:text="@string/bmr_test"
                             android:textColor="@color/yellow"
                             android:textSize="14sp"
                             app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@id/txtInfo1"
+                            app:layout_constraintTop_toBottomOf="@id/txtTableInfo"
                             app:layout_constraintBottom_toBottomOf="parent"/>
 
                     </androidx.constraintlayout.widget.ConstraintLayout>

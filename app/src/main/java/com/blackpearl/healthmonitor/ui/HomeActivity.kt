@@ -67,6 +67,21 @@ class HomeActivity : AppCompatActivity() {
                 val sleepTrackerIntent = Intent(this@HomeActivity, SleepActivity::class.java)
                 startActivity(sleepTrackerIntent)
             }
+
+            cardBMR.setOnClickListener {
+                val bmrIntent = Intent(this@HomeActivity, BmrActivity::class.java)
+                startActivity(bmrIntent)
+            }
+
+            cardPCOD.setOnClickListener {
+                val pcodIntent = Intent(this@HomeActivity, PCODActivity::class.java)
+                startActivity(pcodIntent)
+            }
+
+            cardDiet.setOnClickListener {
+                val dietIntent = Intent(this@HomeActivity, DietActivity::class.java)
+                startActivity(dietIntent)
+            }
         }
     }
 }

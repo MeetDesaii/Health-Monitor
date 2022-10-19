@@ -47,9 +47,23 @@ class SleepActivity : AppCompatActivity() {
 
                     val userSleepTime = document.data?.get("UserSleepTime").toString()
                     val userAwakeTime = document.data?.get("UserAwakeTime").toString()
+                    val userAge = document.data?.get("UserAge").toString().toInt()
 
                     tvSleepTime.text = userSleepTime
                     tvWakeTime.text = userAwakeTime
+
+                    if(userAge in 3..5){
+                        sleepTime.text = "10 to 13 hours"
+                    }
+                    else if(userAge in 6..12){
+                        sleepTime.text = "9 to 12 hours"
+                    }
+                    else if(userAge in 13..18){
+                        sleepTime.text = "8 to 10 hours"
+                    }
+                    else{
+                        sleepTime.text = "7 to 9 hours"
+                    }
                 }
 
             btnBack.setOnClickListener {
@@ -83,7 +97,7 @@ class SleepActivity : AppCompatActivity() {
                             this@SleepActivity,
                             cal.timeInMillis,
                             1,
-                            "Good night $username,",
+                            "Good Night $username,",
                             "It's time to sleep..."
                         )
                     }
@@ -118,7 +132,7 @@ class SleepActivity : AppCompatActivity() {
                             this@SleepActivity,
                             cal.timeInMillis,
                             2,
-                            "Good morning $username,",
+                            "Good Morning $username,",
                             "Have a nice day..."
                         )
                     }
