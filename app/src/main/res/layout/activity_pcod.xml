@@ -134,7 +134,7 @@
                             android:fontFamily="@font/poppins_semi_bold"
                             android:gravity="center"
                             android:layout_marginTop="10dp"
-                            android:textColor="@color/yellow"
+                            android:textColor="@color/blue"
                             android:textSize="16sp"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
@@ -179,7 +179,7 @@
                             android:fontFamily="@font/poppins_semi_bold"
                             android:gravity="center"
                             android:layout_marginTop="15dp"
-                            android:textColor="@color/yellow"
+                            android:textColor="@color/blue"
                             android:textSize="16sp"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
@@ -222,16 +222,6 @@
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintTop_toTopOf="parent" />
 
-                        <ImageView
-                            android:id="@+id/pcodImg1"
-                            android:layout_width="match_parent"
-                            android:layout_height="300dp"
-                            android:layout_marginTop="10dp"
-                            android:src="@drawable/pcod_img1"
-                            app:layout_constraintTop_toBottomOf="@id/txtWhatIsPCOD"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"/>
-
                         <TextView
                             android:id="@+id/txtInfo1_1"
                             android:layout_width="0dp"
@@ -244,7 +234,17 @@
                             android:textSize="14sp"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintTop_toBottomOf="@id/pcodImg1"/>
+                            app:layout_constraintTop_toBottomOf="@id/txtWhatIsPCOD"/>
+
+                        <ImageView
+                            android:id="@+id/pcodImg1"
+                            android:layout_width="match_parent"
+                            android:layout_height="300dp"
+                            android:layout_marginTop="10dp"
+                            android:src="@drawable/pcod_img1"
+                            app:layout_constraintTop_toBottomOf="@id/txtInfo1_1"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"/>
 
                         <TextView
                             android:id="@+id/txtInfo1_2"
@@ -258,7 +258,7 @@
                             android:textSize="14sp"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintTop_toBottomOf="@id/txtInfo1_1"/>
+                            app:layout_constraintTop_toBottomOf="@id/pcodImg1"/>
 
                         <TextView
                             android:id="@+id/txtInfo1_3"
@@ -310,7 +310,7 @@
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:padding="10dp">
+                        android:padding="15dp">
 
                         <TextView
                             android:id="@+id/txtHowDiagnosed"
@@ -390,7 +390,7 @@
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:padding="10dp">
+                        android:padding="15dp">
 
                         <TextView
                             android:id="@+id/txtProblemsPcod"
@@ -420,6 +420,16 @@
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintTop_toBottomOf="@id/txtProblemsPcod"/>
 
+                        <ImageView
+                            android:id="@+id/pcodImg2"
+                            android:layout_width="match_parent"
+                            android:layout_height="250dp"
+                            android:layout_marginTop="10dp"
+                            android:src="@drawable/exploring_symptoms_pcod"
+                            app:layout_constraintTop_toBottomOf="@id/txtInfo3_1"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"/>
+
                         <TextView
                             android:id="@+id/txtInfo3_2"
                             android:layout_width="0dp"
@@ -432,7 +442,7 @@
                             android:textSize="14sp"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintTop_toBottomOf="@id/txtInfo3_1"/>
+                            app:layout_constraintTop_toBottomOf="@id/pcodImg2"/>
 
                         <TextView
                             android:id="@+id/txtInfo3_3"
@@ -470,7 +480,7 @@
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:padding="10dp">
+                        android:padding="15dp">
 
                         <TextView
                             android:id="@+id/txtTreatmentPcod"
@@ -536,7 +546,7 @@
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:padding="10dp">
+                        android:padding="15dp">
 
                         <TextView
                             android:id="@+id/txtDietPcod"
@@ -602,7 +612,7 @@
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:padding="10dp">
+                        android:padding="15dp">
 
                         <TextView
                             android:id="@+id/txtExercisePcod"
@@ -670,7 +680,7 @@
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:padding="10dp">
+                        android:padding="15dp">
 
                         <TextView
                             android:id="@+id/txtConclusion"
