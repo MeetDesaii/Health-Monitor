@@ -80,10 +80,10 @@ class MainActivity : AppCompatActivity() {
                 else if((userAge.toInt() < 2) || (userAge.toInt() > 120)){
                     edtTxtAge.error = "Range: 2-120 year"
                 }
-                else if((userHeight.toInt() <= 50) || (userHeight.toInt() >= 250)){
+                else if((userHeight.toInt() < 50) || (userHeight.toInt() > 250)){
                     edtTxtHeight.error = "Range: 50-250 cm"
                 }
-                else if((userWeight.toDouble() <= 5) || (userWeight.toDouble() >= 600)){
+                else if((userWeight.toDouble() < 5) || (userWeight.toDouble() > 600)){
                     edtTxtWeight.error = "Range: 5-600 kg"
                 }
                 else{

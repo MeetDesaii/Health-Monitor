@@ -7,6 +7,7 @@
         <entry key="..\:/Programming/Android Developement/Android Projects/Health-Monitor/app/src/main/res/drawable/edittext_background.xml" value="0.125" />
         <entry key="..\:/Programming/Android Developement/Android Projects/Health-Monitor/app/src/main/res/drawable/ic_back_button.xml" value="0.125" />
         <entry key="..\:/Programming/Android Developement/Android Projects/Health-Monitor/app/src/main/res/drawable/ic_day.xml" value="0.118" />
+        <entry key="..\:/Programming/Android Developement/Android Projects/Health-Monitor/app/src/main/res/drawable/ic_edit.xml" value="0.1195" />
         <entry key="..\:/Programming/Android Developement/Android Projects/Health-Monitor/app/src/main/res/drawable/ic_logout.xml" value="0.125" />
         <entry key="..\:/Programming/Android Developement/Android Projects/Health-Monitor/app/src/main/res/drawable/ic_night.xml" value="0.118" />
         <entry key="..\:/Programming/Android Developement/Android Projects/Health-Monitor/app/src/main/res/drawable/ic_right_bullet_vector.xml" value="0.125" />
@@ -14,6 +15,7 @@
         <entry key="..\:/Programming/Android Developement/Android Projects/Health-Monitor/app/src/main/res/layout/activity_bmi.xml" value="0.22" />
         <entry key="..\:/Programming/Android Developement/Android Projects/Health-Monitor/app/src/main/res/layout/activity_bmr.xml" value="0.17777777777777778" />
         <entry key="..\:/Programming/Android Developement/Android Projects/Health-Monitor/app/src/main/res/layout/activity_diet.xml" value="0.18611111111111112" />
+        <entry key="..\:/Programming/Android Developement/Android Projects/Health-Monitor/app/src/main/res/layout/activity_edit_profile.xml" value="0.18611111111111112" />
         <entry key="..\:/Programming/Android Developement/Android Projects/Health-Monitor/app/src/main/res/layout/activity_forgot_password.xml" value="0.2" />
         <entry key="..\:/Programming/Android Developement/Android Projects/Health-Monitor/app/src/main/res/layout/activity_home.xml" value="0.2" />
         <entry key="..\:/Programming/Android Developement/Android Projects/Health-Monitor/app/src/main/res/layout/activity_main.xml" value="0.22" />

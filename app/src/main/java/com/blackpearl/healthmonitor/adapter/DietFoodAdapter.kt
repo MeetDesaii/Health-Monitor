@@ -20,6 +20,8 @@ class DietFoodAdapter(private var foodList: ArrayList<DietFood>) :
             binding.txtFoodCalories.text = "Calories: ${dietFood.calories} Cal per 100 g"
             binding.txtFoodProteins.text = "Proteins: ${dietFood.proteins} g per 100 g"
             binding.txtFoodFats.text = "Fats: ${dietFood.fats} g per 100 g"
+            binding.txtFoodCarbs.text = "Carbs: ${dietFood.carbs} g per 100 g"
+            binding.txtFoodFiber.text = "Fiber: ${dietFood.fiber} g per 100 g"
         }
     }
 

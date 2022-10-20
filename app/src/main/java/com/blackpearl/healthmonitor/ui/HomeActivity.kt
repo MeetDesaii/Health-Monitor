@@ -29,14 +29,6 @@ class HomeActivity : AppCompatActivity() {
 
             val userUid = firebaseAuth.currentUser!!.uid
 
-            icLogOut.setOnClickListener {
-                firebaseAuth.signOut()
-
-                val signInIntent = Intent(this@HomeActivity, SignInActivity::class.java)
-                startActivity(signInIntent)
-                finish()
-            }
-
             ProgressBarDialog.showProgressDialog(this@HomeActivity)
 
             database.collection("Users")
@@ -81,6 +73,19 @@ class HomeActivity : AppCompatActivity() {
             cardDiet.setOnClickListener {
                 val dietIntent = Intent(this@HomeActivity, DietActivity::class.java)
                 startActivity(dietIntent)
+            }
+
+            cardEditProfile.setOnClickListener {
+                val editProfileIntent = Intent(this@HomeActivity, EditProfileActivity::class.java)
+                startActivity(editProfileIntent)
+            }
+
+            cardLogOut.setOnClickListener {
+                firebaseAuth.signOut()
+
+                val signInIntent = Intent(this@HomeActivity, SignInActivity::class.java)
+                startActivity(signInIntent)
+                finish()
             }
         }
     }
