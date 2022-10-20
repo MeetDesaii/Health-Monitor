@@ -13,6 +13,7 @@
         <entry key="..\:/Programming/Android Developement/Android Projects/Health-Monitor/app/src/main/res/drawable/progress_background.xml" value="0.125" />
         <entry key="..\:/Programming/Android Developement/Android Projects/Health-Monitor/app/src/main/res/layout/activity_bmi.xml" value="0.22" />
         <entry key="..\:/Programming/Android Developement/Android Projects/Health-Monitor/app/src/main/res/layout/activity_bmr.xml" value="0.17777777777777778" />
+        <entry key="..\:/Programming/Android Developement/Android Projects/Health-Monitor/app/src/main/res/layout/activity_diet.xml" value="0.18611111111111112" />
         <entry key="..\:/Programming/Android Developement/Android Projects/Health-Monitor/app/src/main/res/layout/activity_forgot_password.xml" value="0.2" />
         <entry key="..\:/Programming/Android Developement/Android Projects/Health-Monitor/app/src/main/res/layout/activity_home.xml" value="0.2" />
         <entry key="..\:/Programming/Android Developement/Android Projects/Health-Monitor/app/src/main/res/layout/activity_main.xml" value="0.22" />
@@ -22,6 +23,7 @@
         <entry key="..\:/Programming/Android Developement/Android Projects/Health-Monitor/app/src/main/res/layout/activity_sleep.xml" value="0.17777777777777778" />
         <entry key="..\:/Programming/Android Developement/Android Projects/Health-Monitor/app/src/main/res/layout/activity_splash.xml" value="0.2" />
         <entry key="..\:/Programming/Android Developement/Android Projects/Health-Monitor/app/src/main/res/layout/activity_water_suggestion.xml" value="0.2" />
+        <entry key="..\:/Programming/Android Developement/Android Projects/Health-Monitor/app/src/main/res/layout/diet_food_layout.xml" value="0.18611111111111112" />
         <entry key="..\:/Programming/Android Developement/Android Projects/Health-Monitor/app/src/main/res/layout/progress_dialog.xml" value="0.2" />
       </map>
     </option>

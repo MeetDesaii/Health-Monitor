@@ -46,7 +46,7 @@ class PCODActivity : AppCompatActivity() {
 
             btnPredict.setOnClickListener {
 
-                txtPredictedDate.text = "Next Period Date: $predictedDate"
+                txtPredictedDate.text = "Predicted Next Period Date: $predictedDate"
 
                 txtPredictInfo.visibility = View.INVISIBLE
             }
