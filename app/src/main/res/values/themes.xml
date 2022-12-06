@@ -14,7 +14,7 @@
 
         <item name="android:forceDarkAllowed" tools:targetApi="q">false</item>
 
-        <item name="android:windowLightStatusBar" >true</item>
+        <item name="android:windowLightStatusBar">true</item>
         <!-- Customize your theme here. -->
     </style>
 </resources>
