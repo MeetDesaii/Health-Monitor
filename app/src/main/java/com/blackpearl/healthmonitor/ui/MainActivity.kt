@@ -47,12 +47,7 @@ class MainActivity : AppCompatActivity() {
             icLogOut.setOnClickListener {
 
                 ProgressBarDialog.dismissProgressDialog()
-
-                firebaseAuth.signOut()
-
-                val signInIntent = Intent(this@MainActivity, SignInActivity::class.java)
-                startActivity(signInIntent)
-                finish()
+                signOutDialog(firebaseAuth)
             }
 
             database.collection("Users")
@@ -141,6 +136,7 @@ class MainActivity : AppCompatActivity() {
                     super.onPositiveClicked(dialog)
 
                     firebaseAuth.signOut()
+
                     val signInIntent = Intent(this@MainActivity, SignInActivity::class.java)
                     startActivity(signInIntent)
                     finish()
