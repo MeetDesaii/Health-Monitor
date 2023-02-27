@@ -93,8 +93,12 @@ class SignInActivity : AppCompatActivity() {
                                                 MotionToast.LONG_DURATION,
                                                 ResourcesCompat.getFont(this@SignInActivity, R.font.poppins_regular))
 
-                                            val homeIntent = Intent(this@SignInActivity, HomeActivity::class.java)
-                                            startActivity(homeIntent)
+//                                            val homeIntent = Intent(this@SignInActivity, HomeActivity::class.java)
+//                                            startActivity(homeIntent)
+//                                            finish()
+
+                                            val introductionIntent = Intent(this@SignInActivity, IntroductionActivity::class.java)
+                                            startActivity(introductionIntent)
                                             finish()
                                         }
                                     }

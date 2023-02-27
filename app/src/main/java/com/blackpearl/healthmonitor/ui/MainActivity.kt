@@ -1,5 +1,6 @@
 package com.blackpearl.healthmonitor.ui
 
+import android.app.Dialog
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -10,6 +11,9 @@ import com.blackpearl.healthmonitor.databinding.ActivityMainBinding
 import com.blackpearl.healthmonitor.utils.ProgressBarDialog
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
+import com.saadahmedsoft.popupdialog.PopupDialog
+import com.saadahmedsoft.popupdialog.Styles
+import com.saadahmedsoft.popupdialog.listener.OnDialogButtonClickListener
 import www.sanju.motiontoast.MotionToast
 import www.sanju.motiontoast.MotionToastStyle
 
@@ -107,11 +111,46 @@ class MainActivity : AppCompatActivity() {
                         MotionToast.LONG_DURATION,
                         ResourcesCompat.getFont(this@MainActivity, R.font.poppins_regular))
 
-                    val homeIntent = Intent(this@MainActivity, HomeActivity::class.java)
-                    startActivity(homeIntent)
+//                    val homeIntent = Intent(this@MainActivity, HomeActivity::class.java)
+//                    startActivity(homeIntent)
+//                    finish()
+
+                    val introductionIntent = Intent(this@MainActivity, IntroductionActivity::class.java)
+                    startActivity(introductionIntent)
                     finish()
                 }
             }
         }
+    }
+
+    private fun signOutDialog(firebaseAuth: FirebaseAuth) {
+        PopupDialog.getInstance(this)
+            .setStyle(Styles.IOS)
+            .setHeading("Sign out")
+            .setPositiveButtonText("Confirm")
+            .setHeadingTextColor(R.color.blue)
+            .setDescriptionTextColor(R.color.gray)
+            .setPositiveButtonTextColor(R.color.blue)
+            .setNegativeButtonTextColor(R.color.blue)
+            .setDescription(
+                "Are you confirm you want to sign out?"
+            )
+            .setCancelable(false)
+            .showDialog(object : OnDialogButtonClickListener() {
+                override fun onPositiveClicked(dialog: Dialog?) {
+                    super.onPositiveClicked(dialog)
+
+                    firebaseAuth.signOut()
+                    val signInIntent = Intent(this@MainActivity, SignInActivity::class.java)
+                    startActivity(signInIntent)
+                    finish()
+                }
+
+                override fun onNegativeClicked(dialog: Dialog?) {
+                    super.onNegativeClicked(dialog)
+
+                    dialog!!.dismiss()
+                }
+            })
     }
 }
