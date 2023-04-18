@@ -48,13 +48,13 @@ class SplashActivity : AppCompatActivity() {
                                 finish()
                             }
                             else{
-//                                val homeIntent = Intent(this@SplashActivity, HomeActivity::class.java)
-//                                startActivity(homeIntent)
-//                                finish()
-
-                                val introductionIntent = Intent(this@SplashActivity, IntroductionActivity::class.java)
-                                startActivity(introductionIntent)
+                                val homeIntent = Intent(this@SplashActivity, HomeActivity::class.java)
+                                startActivity(homeIntent)
                                 finish()
+
+//                                val introductionIntent = Intent(this@SplashActivity, IntroductionActivity::class.java)
+//                                startActivity(introductionIntent)
+//                                finish()
                             }
                         }
                 }
